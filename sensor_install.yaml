@@ -61,7 +61,7 @@ action:
               + ''/config'' }}'
             payload: "{\n  \"name\": \"{{ 'Motion State ' + trigger.payload_json.RfReceived.Data[:5]}}\"\
               ,\n  \"stat_t\": \"~MOTION_STATE\",\n  \"device_class\": \"motion\",\n  \"off_delay\"\
-              : \"1\",\n  \"uniq_id\": \"{{ 'State-' + trigger.payload_json.RfReceived.Data[:5]}}\"\
+              : \"5\",\n  \"uniq_id\": \"{{ 'State-' + trigger.payload_json.RfReceived.Data[:5]}}\"\
               ,\n  \"device\": {\n    \"identifiers\": [\n      \"{{trigger.payload_json.RfReceived.Data[:5]}}\"\
               \n    ]\n  },\n  \"~\": \"{{ trigger.payload_json.RfReceived.Data[:5] + '/tele/'\
               \ }}\"\n}"
